@@ -286,6 +286,9 @@
   }
 
   /* buy section */
+  .buy {
+    margin-top: 3rem;
+  }
 
   .buy__inner {
     display: grid;
