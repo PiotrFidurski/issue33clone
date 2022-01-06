@@ -3,7 +3,7 @@
 .introduction {
   display: grid;
   grid-template-columns: none;
-  grid-template-rows: 2.3rem minmax(auto, 1fr) auto 2.3rem minmax(auto, 1fr);
+  grid-template-rows: 2.3rem minmax(auto, 1fr) auto minmax(auto, 1fr);
   row-gap: 2rem;
 }
 
@@ -43,13 +43,13 @@
 }
 
 .introduction__content {
-  grid-row: 5;
+  grid-row: 4;
   grid-column: 1 / 6;
 }
 
 .introduction__content p {
   font-weight: 500;
-  max-width: 30ch;
+  max-width: 25ch;
   padding: 0;
   margin: 0;
 }
@@ -59,10 +59,14 @@
 }
 
 .introduction__media {
-  grid-row: 1 / 5;
+  grid-row: 1 / 4;
   grid-column: 1 / 6;
   position: relative;
   z-index: -1;
+}
+
+.introduction__media img {
+  object-fit: cover;
 }
 
 .introduction__media:before {
@@ -81,7 +85,6 @@
 /* buy section */
 
 .buy {
-  margin-top: 3rem;
   padding: 1.2rem 0;
   position: relative;
   background-color: var(--main-color);
@@ -194,7 +197,7 @@
 /* studio gallery section */
 
 .studio {
-  margin-top: 3rem;
+  margin: 3rem 0;
   background-color: var(--color-sand);
   position: relative;
   padding: 1rem 0;
