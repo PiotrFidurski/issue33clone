@@ -9,7 +9,7 @@
 
 .introduction__header {
   position: relative;
-  grid-row: 2/3;
+  grid-row: 2 / 3;
   grid-column: 2 / 5;
   align-self: center;
   background-color: var(--color-sand);
@@ -96,20 +96,20 @@
   background-image: var(--background-dots);
 }
 
-.buy h2 {
+.buy__inner h2 {
   font-weight: 900;
   position: relative;
   font-size: 2.3rem;
   line-height: 1.1;
 }
 
-.buy h2:after {
+.buy__inner h2:after {
   position: absolute;
   content: ".";
   color: var(--button-background);
 }
 
-.buy p {
+.buy__inner p {
   max-width: 30ch;
 }
 
@@ -142,7 +142,7 @@
   background-image: var(--background-dots);
 }
 
-.work h2 {
+.work__content h2 {
   line-height: 1;
   font-weight: 900;
   position: relative;
@@ -151,21 +151,15 @@
   color: var(--color-watermelon);
 }
 
-.work h2:after {
+.work__content h2:after {
   position: absolute;
   content: ".";
   color: var(--banner-borderColor);
 }
 
-.work p {
+.work__content p {
   max-width: 30ch;
   font-weight: 500;
-}
-
-.work__media {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
 }
 
 .work__inner a {
@@ -179,8 +173,8 @@
   content: "";
   height: 100%;
   position: absolute;
-  bottom: 0.75rem;
-  left: -0.25rem;
+  top: -0.75rem;
+  left: -0.35rem;
   z-index: 1;
   border-radius: 0.25rem;
   border: 0.15rem solid var(--button-hover-background);
@@ -260,6 +254,10 @@
     grid-column: 1 / 4;
   }
 
+  .introduction__header:before {
+    border: 0.25rem solid var(--main-color);
+  }
+
   .introduction__header h1 {
     font-weight: 400;
     font-size: 1.825rem;
@@ -293,14 +291,14 @@
 
   .buy__inner h2 {
     font-size: 4rem;
-    grid-column: 1/9;
+    grid-column: 1 / 9;
     margin: 0 0 1rem 0;
   }
 
   .buy__inner p {
     grid-row: 2;
     margin: 0 0 1rem 0;
-    padding: 0;
+    padding: 1rem 0;
     grid-column: 7 / 12;
   }
 
@@ -315,15 +313,6 @@
     padding: 2rem 0;
   }
 
-  .work h2 {
-    font-size: 4rem;
-    margin: 0;
-  }
-
-  .work p {
-    max-width: 25ch;
-  }
-
   .work__inner {
     display: grid;
     gap: 1.7rem;
@@ -331,25 +320,34 @@
   }
 
   .work__inner :nth-child(2) {
-    grid-column: 4/8;
+    grid-column: 4 / 8;
   }
 
   .work__inner :nth-child(3) {
-    grid-column: 1/4;
+    grid-column: 1 / 4;
   }
 
   .work__inner :nth-child(4) {
-    grid-column: 4/8;
-  }
-
-  .work__content {
-    grid-column: 1/4;
-    grid-row: 1/2;
-    align-self: flex-end;
+    grid-column: 4 / 8;
   }
 
   .work__inner a:before {
     border: 0.2rem solid var(--button-hover-background);
+  }
+
+  .work__content {
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
+    align-self: flex-end;
+  }
+
+  .work__content h2 {
+    font-size: 4rem;
+    margin: 0;
+  }
+
+  .work__content p {
+    max-width: 25ch;
   }
 
   /* studio gallery section */

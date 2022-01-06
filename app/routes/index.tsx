@@ -49,7 +49,6 @@ export default function Index() {
                 Some stuff that should give you an idea of what we’re all about.
               </p>
             </div>
-
             <a href="/">
               <img
                 src="/images/outgoings-hero.jpg"
