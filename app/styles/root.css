@@ -1,10 +1,13 @@
 :root {
   --main-background: #f9f4e3;
+  --light-background: #fdfbf3;
+
   --main-color: #263147;
 
   --nav-text-activeColor: #fa576e;
 
   --color-watermelon: #fc3e59;
+  --color-orange: #fe9476;
   --color-indigo: #513aa6;
   --color-sand: rgba(255, 212, 144, 0.95);
   --color-light: #f9f4e3;
@@ -18,6 +21,10 @@
 }
 
 body {
+  margin: 0;
+  padding: 0;
+  font-family: "Red Hat Display", "Segoe UI", Roboto, "Helvetica Neue", Arial,
+    sans-serif;
   background-color: var(--main-background);
   min-height: 100vh;
   color: var(--main-color);
@@ -25,6 +32,130 @@ body {
   font-size: 1.33rem;
 }
 
-.dot-shadow {
-  background-image: var(--background-dots);
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+.site-wrapper {
+  position: relative;
+  overflow-x: hidden;
+}
+
+.button {
+  display: inline-block;
+  font-weight: 900;
+  padding: 0.5rem 2rem;
+  border: 0.15rem solid var(--main-color);
+  background-color: var(--color-orange);
+  color: var(--main-color);
+  text-transform: uppercase;
+  border-radius: 0.25rem;
+}
+
+.button:hover {
+  background-color: var(--button-hover-background);
+}
+
+.button:focus {
+  outline: 2px dashed var(--color-indigo);
+  outline-offset: 0.25rem;
+}
+
+.skip-nav-link {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 99;
+}
+
+.skip-nav-link:focus {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 99;
+}
+
+.skip-nav-link:not(:focus),
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: auto;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 0px;
+  white-space: nowrap;
+}
+
+.main-header {
+  padding: 2rem 0;
+}
+
+.main-header__inner {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.wrapper {
+  max-width: 70rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.logo {
+  display: block;
+}
+
+.logo:focus {
+  outline: 2px dashed var(--color-indigo);
+  outline-offset: 0.25rem;
+}
+
+.nav {
+  padding: 1rem 0;
+  font-weight: 900;
+  color: var(--main-color);
+}
+
+.nav__list {
+  margin: 0;
+  list-style: none;
+  display: flex;
+  padding: 0;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.nav a {
+  color: currentColor;
+  position: relative;
+}
+
+.nav a:focus {
+  outline: 2px dashed var(--color-indigo);
+  outline-offset: 0.25rem;
+}
+
+.nav a:before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  display: block;
+  height: 0.25rem;
+  background-color: var(--color-watermelon);
+}
+
+.font-sans {
+  font-family: Literata, Georgia, serif;
 }
