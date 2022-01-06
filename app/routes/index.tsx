@@ -1,5 +1,6 @@
 import { LinksFunction } from "remix";
 import { Article } from "~/components/Article";
+import { ImageGallery } from "~/components/ImageGallery";
 import styles from "../styles/index.css";
 
 export const links: LinksFunction = () => {
@@ -10,14 +11,14 @@ export default function Index() {
   return (
     <main id="main-content">
       <div className="wrapper">
-        <article className="start">
-          <div className="start__header">
+        <article className="introduction">
+          <div className="introduction__header">
             <h1>
               Digital Marketing is our
               <em>Bread & Butter</em>
             </h1>
           </div>
-          <div className="start__content">
+          <div className="introduction__content">
             <p>
               Let us help you create the perfect campaign with our multi-faceted
               team of talented creatives.
@@ -26,7 +27,7 @@ export default function Index() {
               see our work
             </a>
           </div>
-          <div className="start__media">
+          <div className="introduction__media">
             <img src="/images/toast.jpg" width="100%" height="100%" />
           </div>
         </article>
@@ -49,21 +50,21 @@ export default function Index() {
               </p>
             </div>
 
-            <a href="">
+            <a href="/">
               <img
                 src="/images/outgoings-hero.jpg"
                 width="100%"
                 height="auto"
               />
             </a>
-            <a href="">
+            <a href="/">
               <img
                 src="/images/behind-the-scenes-hero.jpg"
                 width="100%"
                 height="auto"
               />
             </a>
-            <a href="">
+            <a href="/">
               <img
                 src="/images/brunch-and-brew-hero.jpg"
                 width="100%"
@@ -78,6 +79,7 @@ export default function Index() {
           </a>
         </div>
       </article>
+      <ImageGallery />
       <Article
         header="Get in touch if we seem like a good fit"
         paragraph="Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec ullamcorper nulla non metus auctor fringilla."

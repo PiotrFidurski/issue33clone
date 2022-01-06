@@ -73,7 +73,9 @@ export default function App() {
                 <nav aria-label="Primary navigation" className="nav">
                   <ul className="nav__list">
                     <li>
-                      <a href="/">Home</a>
+                      <a href="/" data-active="true">
+                        Home
+                      </a>
                     </li>
                     <li>
                       <a href="/">About</a>

@@ -4,8 +4,8 @@
 
   --main-color: #263147;
   --nav-text-activeColor: #fa576e;
-
-  --color-watermelon: #fc3e59;
+  --color-turqouise: #6ac2b6;
+  --color-watermelon: #110e0e;
   --color-orange: #fe9476;
   --color-indigo: #513aa6;
   --color-sand: rgba(255, 212, 144, 0.95);
@@ -144,7 +144,7 @@ a {
   outline-offset: 0.25rem;
 }
 
-.nav a:before {
+.nav a[data-active="true"]:before {
   content: "";
   position: absolute;
   top: 100%;

@@ -1,11 +1,13 @@
-.start {
+/* intro section */
+
+.introduction {
   display: grid;
   grid-template-columns: none;
   grid-template-rows: 2.3rem minmax(auto, 1fr) auto 2.3rem minmax(auto, 1fr);
   row-gap: 2rem;
 }
 
-.start__header {
+.introduction__header {
   position: relative;
   grid-row: 2/3;
   grid-column: 2 / 5;
@@ -15,12 +17,12 @@
   padding: 0 1.5rem;
 }
 
-.start__header h1 {
+.introduction__header h1 {
   font-weight: 400;
   font-size: 1rem;
 }
 
-.start__header:before {
+.introduction__header:before {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -31,7 +33,7 @@
   border: 0.125rem solid var(--main-color);
 }
 
-.start__header em {
+.introduction__header em {
   font-weight: 900;
   line-height: 1;
   display: block;
@@ -40,30 +42,30 @@
   font-size: 3.5rem;
 }
 
-.start__content {
+.introduction__content {
   grid-row: 5;
   grid-column: 1 / 6;
 }
 
-.start__content p {
+.introduction__content p {
   font-weight: 500;
   max-width: 30ch;
   padding: 0;
   margin: 0;
 }
 
-.start__content a {
+.introduction__content a {
   margin-top: 1.7rem;
 }
 
-.start__media {
+.introduction__media {
   grid-row: 1 / 5;
   grid-column: 1 / 6;
   position: relative;
   z-index: -1;
 }
 
-.start__media:before {
+.introduction__media:before {
   position: absolute;
   content: "";
   inset: -0.5rem;
@@ -72,9 +74,11 @@
   background-image: var(--background-dots);
 }
 
-.start__media img {
+.introduction__media img {
   border-radius: 0.25rem;
 }
+
+/* buy section */
 
 .buy {
   margin-top: 3rem;
@@ -111,6 +115,7 @@
 
 .shadow-button {
   background: transparent;
+  margin-top: 1rem;
   color: var(--button-background);
   border-color: var(--button-background);
 }
@@ -119,6 +124,8 @@
   background: var(--button-background);
   color: var(--main-color);
 }
+
+/* selected work section */
 
 .work {
   margin-top: 3rem;
@@ -190,24 +197,75 @@
   justify-content: center;
 }
 
+/* studio gallery section */
+
+.studio {
+  margin-top: 3rem;
+  background-color: var(--color-sand);
+  position: relative;
+  padding: 1rem 0;
+}
+
+.studio:before {
+  position: absolute;
+  content: "";
+  z-index: -1;
+  inset: -0.7rem 0 -0.7rem 0;
+  background-image: var(--background-dots);
+}
+
+.studio__inner h2 {
+  font-size: 2.3rem;
+  font-weight: 900;
+  line-height: 1;
+  position: relative;
+}
+
+.studio__inner h2:after {
+  position: absolute;
+  content: ".";
+  color: var(--color-turqouise);
+}
+
+.studio__inner ul {
+  overflow-x: auto;
+  padding: 0;
+  display: flex;
+  list-style: none;
+}
+
+.studio__inner li {
+  width: 17rem;
+  flex-shrink: 0;
+  height: 12rem;
+  padding: 0 1rem 1rem 0;
+}
+
+.studio__inner img {
+  border-radius: 0.25rem;
+}
+
+/* media queries */
+
 @media only screen and (min-width: 768px) {
-  .start {
+  /* intro section */
+  .introduction {
     grid-template-columns: 1rem repeat(3, minmax(auto, 1fr)) 1rem;
     grid-template-rows: 2rem 12rem 2rem 12rem 2rem;
     row-gap: 0;
   }
 
-  .start__header {
+  .introduction__header {
     grid-row: 2 / 3;
     grid-column: 1 / 4;
   }
 
-  .start__header h1 {
+  .introduction__header h1 {
     font-weight: 400;
     font-size: 1.825rem;
   }
 
-  .start__header em {
+  .introduction__header em {
     font-weight: 900;
     line-height: 1;
     display: block;
@@ -216,15 +274,17 @@
     font-size: 5.6rem;
   }
 
-  .start__content {
+  .introduction__content {
     grid-row: 4 / 5;
     grid-column: 1 / 3;
   }
 
-  .start__media {
+  .introduction__media {
     grid-row: 1 / 6;
     grid-column: 3 / 6;
   }
+
+  /* buy section */
 
   .buy__inner {
     display: grid;
@@ -241,13 +301,15 @@
     grid-row: 2;
     margin: 0 0 1rem 0;
     padding: 0;
-    grid-column: 8 / 12;
+    grid-column: 7 / 12;
   }
 
   .buy__inner .buy__action {
     grid-row: 3;
-    grid-column: 7 / 12;
+    grid-column: 6 / 12;
   }
+
+  /* work section */
 
   .work {
     padding: 2rem 0;
@@ -256,6 +318,10 @@
   .work h2 {
     font-size: 4rem;
     margin: 0;
+  }
+
+  .work p {
+    max-width: 25ch;
   }
 
   .work__inner {
@@ -280,5 +346,20 @@
     grid-column: 1/4;
     grid-row: 1/2;
     align-self: flex-end;
+  }
+
+  .work__inner a:before {
+    border: 0.2rem solid var(--button-hover-background);
+  }
+
+  /* studio gallery section */
+
+  .studio__inner h2 {
+    font-size: 4rem;
+  }
+
+  .studio__inner li {
+    width: 25rem;
+    height: 16rem;
   }
 }
